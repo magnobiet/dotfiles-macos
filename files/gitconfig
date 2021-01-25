@@ -1,0 +1,69 @@
+[user]
+  name = Magno Fernando Brixner Biét
+  email = magno.biet@gmail.com
+
+[core]
+  editor = vim
+  excludesfile = ~/.gitignore
+  autocrlf = input
+
+[color]
+  ui = true
+  grep = auto
+  interactive = auto
+  status = auto
+
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+[merge]
+  log = true
+  tool = vim
+
+[pull]
+	rebase = false
+
+[push]
+  default = tracking
+
+[alias]
+  last = log -1 HEAD
+  goto = checkout
+  l = log --pretty=custom --abbrev-commit --all
+  lg = log --pretty=custom --abbrev-commit --all --graph
+  sync = !git pull && git push
+  undo = reset --soft HEAD~1
+  unchanged = update-index --assume-unchanged
+  changed = update-index --no-assume-unchanged
+  resolve-mine = checkout --ours
+  resolve-theirs = checkout --theirs
+  revert = reset --soft HEAD~1
+  ignore = "!gi() { curl -sL https://www.gitignore.io/api/$@ ;}; gi"
+
+[pretty]
+  custom = "%C(red)%h %C(reset)-%C(yellow bold)%d %C(reset)%s %C(green)(%ar) %C(reset)"
+
+[url "https://"]
+  insteadOf = git://
+
+[commit]
+  template = ~/.gitmessage
+
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
