@@ -60,6 +60,7 @@ brew install --cask font-material-icons
 brew install --cask 1password
 brew install --cask authy
 brew install --cask gpg-suite
+brew install --cask keepassxc
 
 # Screensaver
 brew install --cask aerial
@@ -122,7 +123,7 @@ brew install dart
 
 ## Mobile
 brew install --cask android-platform-tools
-brew install --cask cocoapods
+sudo gem install cocoapods
 
 ## IDE/Editors
 brew install --cask visual-studio-code
