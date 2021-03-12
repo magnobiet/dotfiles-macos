@@ -25,15 +25,14 @@ wget -q -O - https://raw.githubusercontent.com/magnobiet/dotfiles-macos/master/b
 git clone https://github.com/magnobiet/dotfiles-macos.git .dotfiles && cd $_
 
 # SSH
-```bash
 git clone git@github.com:magnobiet/dotfiles-macos.git .dotfiles && cd $_
 
+# Run bootstrap
 ./bootstrap.sh
 
 # Optional
 ./apps.sh --work --games --rpi --office --btc --sport --vm --heroku --sync
 ./mobile.sh
-./node.sh
 ./homestead.sh
 ```
 
