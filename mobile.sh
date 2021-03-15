@@ -11,8 +11,8 @@ if ! grep -q "fvm/default/bin" "$HOME/.zshrc"; then
 fi
 
 pub global activate slidy
-fvm install 1.22.6
-fvm use 1.22.6 --global --force
+fvm install 2.0.2
+fvm use 2.0.2 --global --force
 
 flutter --version
 flutter doctor
