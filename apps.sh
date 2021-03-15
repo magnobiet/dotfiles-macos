@@ -94,8 +94,6 @@ brew install git
 brew install git-flow-avh
 brew install --cask github
 
-brew install --cask xcodes
-
 ## Databases and APIs
 brew install --cask postman
 brew install --cask ngrok
@@ -113,9 +111,6 @@ if ! grep -q "export NVM_DIR" "$HOME/.zshrc"; then
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 fi
-
-nvm install --lts
-nvm use --lts
 
 brew install ruby
 
@@ -170,8 +165,6 @@ brew install --cask figma
 brew install exiftool
 
 # Productivity
-brew install --cask rescuetime
-
 if [ "$withWorkApps" = true ] ; then
   brew install --cask toggl-track
 fi
