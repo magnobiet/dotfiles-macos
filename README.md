@@ -31,7 +31,7 @@ git clone git@github.com:magnobiet/dotfiles-macos.git .dotfiles && cd $_
 ./bootstrap.sh
 
 # Optional
-./apps.sh --work --games --rpi --office --btc --sport --vm --heroku --sync
+./apps.sh --work --games --rpi --office --btc --sport --vm --heroku --sync --db --bank
 ./mobile.sh
 ./homestead.sh
 ```

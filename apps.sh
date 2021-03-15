@@ -9,6 +9,8 @@ withSport=false
 withVirtualBox=false
 withHeroku=false
 withSync=false
+withDatabase=false
+withBank=false
 
 while test $# -gt 0; do
 
@@ -22,6 +24,8 @@ while test $# -gt 0; do
     --vm) withVirtualBox=true ;;
     --heroku) withHeroku=true ;;
     --sync) withSync=true ;;
+    --db) withDatabase=true ;;
+    --bank) widhBank=true ;;
   esac
 
   shift
@@ -90,11 +94,13 @@ brew install git
 brew install git-flow-avh
 brew install --cask github
 
+brew install --cask xcodes
+
 ## Databases and APIs
 brew install --cask postman
 brew install --cask ngrok
 
-if [ "$withWorkApps" = true ] ; then
+if [ "$withDatabase" = true ] ; then
   brew install --cask dbeaver-community
 fi
 
@@ -228,6 +234,11 @@ if [ "$withBitcoin" = true ] ; then
   brew install --cask exodus
 fi
 
+# Bank
+if [ "$withBank" = true ] ; then
+  brew install --cask itau
+fi
+
 # Others
 brew install --cask macdown
 brew install --cask gifox
@@ -238,3 +249,8 @@ brew install --cask spectacle
 brew install --cask cakebrew
 brew install --cask appcleaner
 brew install --cask dozer
+brew install --cask itsycal
+brew install --cask android-file-transfer
+brew install --cask foxitreader
+brew install --cask latest
+brew install --cask the-unarchiver
