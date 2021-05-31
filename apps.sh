@@ -63,7 +63,7 @@ brew install --cask font-material-icons
 # Security
 brew install --cask 1password
 brew install --cask authy
-brew install --cask gpg-suite
+brew install --cask gpg
 brew install --cask keepassxc
 
 # Screensaver
@@ -86,6 +86,7 @@ fi
 # Browsers
 brew install --cask firefox
 brew install --cask brave-browser
+brew install --cask beaker-browser
 brew install --cask google-chrome
 brew install --cask microsoft-edge
 
@@ -93,6 +94,11 @@ brew install --cask microsoft-edge
 brew install git
 brew install git-flow-avh
 brew install --cask github
+brew install --cask sourcetree
+
+## Security
+brew tap snyk/tap
+brew install snyk
 
 ## Databases and APIs
 brew install --cask postman
@@ -103,24 +109,7 @@ if [ "$withDatabase" = true ] ; then
 fi
 
 ## Runtime and SDKs
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
-
-if ! grep -q "export NVM_DIR" "$HOME/.zshrc"; then
-
-  export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
-fi
-
-brew install ruby
-
-brew install python@3.9
-brew install pipenv
-
 brew install --cask oracle-jdk
-
-brew tap dart-lang/dart
-brew install dart
 
 ## Mobile
 brew install --cask android-platform-tools
@@ -239,7 +228,6 @@ brew install --cask skitch
 brew install --cask notion
 brew install --cask anki
 brew install --cask spectacle
-brew install --cask cakebrew
 brew install --cask appcleaner
 brew install --cask dozer
 brew install --cask itsycal
@@ -247,3 +235,4 @@ brew install --cask android-file-transfer
 brew install --cask foxitreader
 brew install --cask latest
 brew install --cask the-unarchiver
+brew install --cask typora
