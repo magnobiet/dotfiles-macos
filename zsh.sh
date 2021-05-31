@@ -2,10 +2,14 @@
 
 brew install --cask iterm2
 
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+if [ ! `which zsh` ]; then
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
 
-brew install romkatv/powerlevel10k/powerlevel10k
-echo 'source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+if [ ! `which p10k` ]; then
+  brew install romkatv/powerlevel10k/powerlevel10k
+  echo 'source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+fi
 
 AUTOSUGGESTIONS_PLUGIN_PATH=${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 if [ ! -d $AUTOSUGGESTIONS_PLUGIN_PATH ]; then
