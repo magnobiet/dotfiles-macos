@@ -178,7 +178,7 @@ function google() {
 function __php_composer() {
 
   docker run \
-     `tty -s && tty=--tty` \
+    `tty -s && tty=--tty` \
     --init \
     --interactive \
     --rm \
