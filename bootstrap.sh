@@ -20,11 +20,14 @@ fi
 mkdir -p $HOME/Developer/{SDK,GitHub}
 
 # Generate SSH key
-if [ ! -f "$HOME/.ssh/id_rsa.pub" ]; then
-  ssh-keygen -t rsa -b 4096
+if [ ! -f "$HOME/.ssh/id_ed25519.pub" ]; then
+  ssh-keygen -o -a 100 -t ed25519 -C "magno.biet@gmail.com"
 fi
 
-cat $HOME/.ssh/id_rsa.pub
+eval "$(ssh-agent -s)"
+ssh-add $HOME/.ssh/id_ed25519
+
+cat $HOME/.ssh/id_ed25519.pub
 
 # Homebrew
 if [ ! `which brew` ]; then
