@@ -132,6 +132,7 @@ fi
 # Containers and virtual machines
 brew install --cask docker
 brew install docker-compose
+brew install ctop
 
 brew install --cask switchhosts
 
