@@ -237,3 +237,5 @@ brew install --cask foxitreader
 brew install --cask latest
 brew install --cask the-unarchiver
 brew install --cask typora
+brew install --cask keycastr
+
