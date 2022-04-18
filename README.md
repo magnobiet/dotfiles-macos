@@ -13,7 +13,7 @@
    - `files/gitconfig` (lines 2 and 3)
    - `files/npmrc` (lines 1, 2 and 3)
    - `bootstrap.sh` (line 24 or 25)
-3. If you don't want the Dracula theme, on `boostrap.sh` comment the line 69
+3. If you don't want the Dracula theme, on `boostrap.sh` comment the line 70
 4. On `apps.sh` comment or remove the apps that you don't need, the same one on `asdf.sh`
 
 ```bash
