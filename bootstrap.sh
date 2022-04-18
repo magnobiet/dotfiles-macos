@@ -21,6 +21,7 @@ mkdir -p $HOME/Developer/{SDK,GitHub}
 
 # Generate SSH key
 if [ ! -f "$HOME/.ssh/id_ed25519.pub" ]; then
+  # ssh-keygen -t rsa -b 4096 -C "magno.biet@gmail.com"
   ssh-keygen -o -a 100 -t ed25519 -C "magno.biet@gmail.com"
 fi
 
@@ -62,16 +63,16 @@ sh $DOTFILES_PATH/defaults.sh
 # Reset Dock
 sh $DOTFILES_PATH/dock.sh
 
+# ZSH
+sh $DOTFILES_PATH/zsh.sh
+
 # Install Dracula Theme
 sh $DOTFILES_PATH/dracula.sh
 
 # Install apps
-sh $DOTFILES_PATH/apps.sh --games --rpi --office --btc --sport --vm --heroku --sync --db --bank
+sh $DOTFILES_PATH/apps.sh --work --office --vm --sync --db
 sh $DOTFILES_PATH/node.sh
 sh $DOTFILES_PATH/mobile.sh
-
-# ZSH
-sh $DOTFILES_PATH/zsh.sh
 
 # Cleanup Homebrew
 brew cleanup
@@ -79,26 +80,13 @@ brew cleanup
 # Dotfiles
 sh $DOTFILES_PATH/dotfiles.sh
 
-# Open applications
-open /Applications/Spectacle.app
-open /Applications/Dozer.app
-
-open /Applications/Spotify.app
-
-open /Applications/Authy\ Desktop.app
-open /Applications/1Password\ 7.app
-
-open /Applications/Dropbox.app
-open /Applications/Backup\ and\ Sync.app
-open /Applications/MEGAsync.app
-open /Applications/OneDrive.app
-
-open /System/Applications/App\ Store.app
-
-open /Applications/Firefox.app
+# Open apps that need to be configured
+sh $DOTFILES_PATH/open.sh
 
 # Reset Launchpad
 defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock
+
+neofetch
 
 echo ""
 echo "✅ Done. Note that some of these changes require a logout/restart to take effect.\n"

@@ -9,8 +9,8 @@ alias lh='ls -lahdFG .??*' # only hidden
 # Utils
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 alias clock='date "+%A %m/%d -%l:%M %p"'
-alias sshgenrsa='ssh-keygen -t rsa -b 4096 -C "magno.biet@gmail.com"'
-alias sshgened='ssh-keygen -o -a 100 -t ed25519 -C "magno.biet@gmail.com"'
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en0"
 
 # PHP Development
 alias php='__php'
@@ -22,6 +22,3 @@ alias phpinsights='__phpinsights'
 alias artisan='php artisan'
 alias homestead='__homestead'
 alias sail='bash vendor/bin/sail'
-
-# Docker
-alias compose='docker-compose'

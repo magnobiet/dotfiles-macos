@@ -45,10 +45,10 @@ defaults write com.apple.screencapture location -string "${HOME}/Screen Shots"
 defaults write com.apple.screencapture type -string "png"
 
 # DOCK #########################################################################
-# minimize windows into their application’s icon
+# minimize windows into their application's icon
 defaults write com.apple.dock minimize-to-application -bool true
 
-# don’t show recent applications in Dock
+# don't show recent applications in Dock
 defaults write com.apple.dock show-recents -bool false
 
 # Hot corners
@@ -69,14 +69,14 @@ defaults write com.apple.dock wvous-bl-corner -int 11
 defaults write com.apple.dock wvous-bl-modifier -int 0
 
 # SAFARI #######################################################################
-# privacy: don’t send search queries to Apple
+# privacy: don't send search queries to Apple
 defaults write com.apple.Safari UniversalSearchEnabled -bool false
 defaults write com.apple.Safari SuppressSearchSuggestions -bool true
 
-# set Safari’s home page to `about:blank`
+# set Safari's home page to `about:blank`
 defaults write com.apple.Safari HomePage -string "about:blank"
 
-# enable Safari’s debug menu
+# enable Safari's debug menu
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 
 # Enable the Develop menu and the Web Inspector

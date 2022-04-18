@@ -62,6 +62,11 @@ brew install --cask font-material-icons
 
 # Security
 brew install --cask 1password
+# brew install --cask nordpass
+# brew install --cask bitwarden
+# brew install --cask lastpass
+# brew install --cask dashlane
+# brew install --cask keeper-password-manager
 brew install --cask authy
 brew install --cask gpg
 brew install --cask keepassxc
@@ -70,15 +75,15 @@ brew install --cask keepassxc
 brew install --cask aerial
 
 # Comunication
-brew install --cask slack
-brew install --cask zoom
 brew install --cask discord
+brew install --cask zoom
+brew install --cask slack
 brew install --cask telegram
 brew install --cask whatsapp
 
 if [ "$withWorkApps" = true ] ; then
 
-  brew install --cask rocket-chat
+  # brew install --cask rocket-chat
   brew install --cask microsoft-teams
 
 fi
@@ -86,7 +91,7 @@ fi
 # Browsers
 brew install --cask firefox
 brew install --cask brave-browser
-brew install --cask beaker-browser
+# brew install --cask beaker-browser
 brew install --cask google-chrome
 brew install --cask microsoft-edge
 
@@ -153,6 +158,10 @@ brew install --cask poedit
 brew install --cask figma
 brew install exiftool
 
+## Screenshots
+brew install --cask skitch
+brew install --cask gifox
+
 # Productivity
 if [ "$withWorkApps" = true ] ; then
   brew install --cask toggl-track
@@ -178,14 +187,19 @@ if [ "$withSync" = true ] ; then
   brew install --cask dropbox
   brew install --cask onedrive
   brew install --cask megasync
-  brew install --cask google-photos-backup-and-sync
+  brew install --cask google-drive
   brew install --cask transmission
 
 fi
 
+# Write
+brew install --cask macdown
+brew install --cask typora
+
 # Grammar
 brew install --cask grammarly
 brew install --cask dictionaries
+# TODO: wget -c https://cdn.reverso.net/download/reverso/desktop/macos/Reverso.dmg
 
 # Activity tracking analysis
 if [ "$withSport" = true ] ; then
@@ -222,17 +236,14 @@ if [ "$withBank" = true ] ; then
 fi
 
 # Others
-brew install --cask macdown
-brew install --cask gifox
-brew install --cask skitch
 brew install --cask notion
 brew install --cask anki
-brew install --cask spectacle
-brew install --cask appcleaner
+brew install --cask tiles
 brew install --cask dozer
 brew install --cask itsycal
+brew install --cask appcleaner
 brew install --cask android-file-transfer
 brew install --cask foxitreader
 brew install --cask latest
 brew install --cask the-unarchiver
-brew install --cask typora
+brew install folderify

@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/windows,linux,osx,archives
-# Edit at https://www.toptal.com/developers/gitignore?templates=windows,linux,osx,archives
+# Created by https://www.toptal.com/developers/gitignore/api/osx,linux,windows,archives
+# Edit at https://www.toptal.com/developers/gitignore?templates=osx,linux,windows,archives
 
 ### Archives ###
 # It's better to unpack these files and commit the raw source because
@@ -101,4 +101,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/windows,linux,osx,archives
+# End of https://www.toptal.com/developers/gitignore/api/osx,linux,windows,archives

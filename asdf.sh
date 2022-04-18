@@ -23,8 +23,8 @@ echo -e "\n. $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash" >> ~/.zshrc
 source .zshrc
 
 asdf plugin-add nodejs
-asdf install nodejs 14.17.0
-asdf global nodejs 14.17.0
+asdf install nodejs 16.14.2
+asdf global nodejs 16.14.2
 
 asdf plugin-add dart https://github.com/patoconnor43/asdf-dart.git
 asdf install dart 2.12.4
