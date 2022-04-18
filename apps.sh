@@ -60,6 +60,10 @@ brew install --cask font-fira-sans-extra-condensed
 brew install --cask font-fontawesome
 brew install --cask font-material-icons
 
+# Terminal
+brew install vim
+brew install --cask iterm2
+
 # Security
 brew install --cask 1password
 # brew install --cask nordpass

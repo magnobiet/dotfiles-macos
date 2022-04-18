@@ -8,7 +8,8 @@
 
 > **Warning**: If you want to give these dotfiles a try, you should first fork this repository, review the code, and remove things you don't want or need. Don't blindly use my settings unless you know what that entails. Use at your own risk!
 
-1. [Fork](https://github.com/magnobiet/dotfiles-macos/fork) and clone this repository on your machine.
+1. [Fork](https://github.com/magnobiet/dotfiles-macos/fork) and clone this repository on your machine
+   - `git clone https://github.com/YOUR_USER_NAME/dotfiles-macos/ $HOME/.dotfiles && cd $_`
 2. Replace the personal data on the following files:
    - `files/gitconfig` (lines 2 and 3)
    - `files/npmrc` (lines 1, 2 and 3)
@@ -18,7 +19,8 @@
 
 ```bash
 # after updating all the files above, run
-./bootstrap
+./bootstrap.sh
+./zsh.sh # run only if you want to use ZSH
 
 # or just run at your own risk the following command
 bash -c "`curl -fsSL https://raw.githubusercontent.com/magnobiet/dotfiles-macos/master/bootstrap.sh`"

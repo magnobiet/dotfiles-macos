@@ -1,15 +1,27 @@
 #!/bin/bash
 
-brew install vim
 brew install --cask iterm2
+
+if [ ! `which vim` ]; then
+  brew install vim
+fi
 
 if [ ! `which zsh` ]; then
   sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
 if [ ! `which p10k` ]; then
+
   brew install romkatv/powerlevel10k/powerlevel10k
-  echo 'source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+
+  if ! grep -q "/usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme" "$HOME/.zshrc"; then
+
+    echo "
+echo 'source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme' >> $HOME/.zshrc
+" >> $HOME/.zshrc
+
+  fi
+
 fi
 
 # auto suggestions
@@ -29,3 +41,7 @@ if [ ! -d $SYNTAX_HIGHLIGHTING_PLUGIN_PATH ]; then
 else
   cd $SYNTAX_HIGHLIGHTING_PLUGIN_PATH && git pull
 fi
+
+source $HOME/.zshrc
+
+p10k configure

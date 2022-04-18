@@ -1,7 +1,12 @@
 #!/bin/bash
 
+HOSTNAME="dev01"
+
+# set the timezone to America/Sao_Paulo"
+systemsetup -settimezone 'America/Sao_Paulo' > /dev/null
+
 # restart automatically if the computer freezes
-sudo systemsetup -setrestartfreeze on
+# sudo systemsetup -setrestartfreeze on
 
 # MENU BAR #####################################################################
 # show battery percentage
@@ -27,10 +32,13 @@ defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 chflags nohidden ~/Library
 
 # show the /Volumes folder
-chflags nohidden /Volumes
+# chflags nohidden /Volumes
 
 # save to disk (not to iCloud) by default
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+
+# empty Trash securely by default
+defaults write com.apple.finder EmptyTrashSecurely -bool true
 
 # SCREEN #######################################################################
 # require password immediately after sleep or screen saver begins
@@ -115,3 +123,7 @@ defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
 
 # turn on app auto-update
 defaults write com.apple.commerce AutoUpdate -bool true
+
+# BLUETOOTH AUDIO ##############################################################
+# increase sound quality for Bluetooth headphones/headsets"
+defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40

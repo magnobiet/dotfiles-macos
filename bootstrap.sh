@@ -33,6 +33,7 @@ cat $HOME/.ssh/id_ed25519.pub
 # Homebrew
 if [ ! `which brew` ]; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  echo 'export PATH="/usr/local/sbin:$PATH"' >> $HOME/.zshrc
 fi
 
 # Git
@@ -60,11 +61,8 @@ brew install neofetch
 # macOS default configs
 sh $DOTFILES_PATH/defaults.sh
 
-# Reset Dock
-sh $DOTFILES_PATH/dock.sh
-
-# ZSH
-sh $DOTFILES_PATH/zsh.sh
+# ASDF
+sh $DOTFILES_PATH/asdf.sh
 
 # Install Dracula Theme
 sh $DOTFILES_PATH/dracula.sh
@@ -79,6 +77,9 @@ brew cleanup
 
 # Dotfiles
 sh $DOTFILES_PATH/dotfiles.sh
+
+# Reset Dock
+sh $DOTFILES_PATH/dock.sh
 
 # Open apps that need to be configured
 sh $DOTFILES_PATH/open.sh
