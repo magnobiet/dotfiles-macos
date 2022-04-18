@@ -137,6 +137,7 @@ fi
 # Containers and virtual machines
 brew install --cask docker
 brew install docker-compose
+brew install ctop
 
 brew install --cask switchhosts
 
@@ -246,4 +247,5 @@ brew install --cask android-file-transfer
 brew install --cask foxitreader
 brew install --cask latest
 brew install --cask the-unarchiver
+brew install --cask keycastr
 brew install folderify

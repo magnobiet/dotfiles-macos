@@ -1,5 +1,7 @@
 #  Magno's dotfiles
 
+![OS](https://img.shields.io/badge/OS-%20macOS-light)
+
 ![Preview](preview.png)
 
 ## Installation
