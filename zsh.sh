@@ -14,11 +14,9 @@ if [ ! `which p10k` ]; then
 
   brew install romkatv/powerlevel10k/powerlevel10k
 
-  if ! grep -q "/usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme" "$HOME/.zshrc"; then
+  if ! grep -q "/opt/powerlevel10k/powerlevel10k.zsh-theme" "$HOME/.zshrc"; then
 
-    echo "
-echo 'source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme' >> $HOME/.zshrc
-" >> $HOME/.zshrc
+    echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
 
   fi
 

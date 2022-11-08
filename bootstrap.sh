@@ -69,7 +69,6 @@ sh $DOTFILES_PATH/dracula.sh
 
 # Install apps
 sh $DOTFILES_PATH/apps.sh --work --office --vm --sync --db
-sh $DOTFILES_PATH/node.sh
 sh $DOTFILES_PATH/mobile.sh
 
 # Cleanup Homebrew

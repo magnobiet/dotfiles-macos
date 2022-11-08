@@ -57,8 +57,10 @@ brew install --cask font-fira-sans
 brew install --cask font-fira-sans-condensed
 brew install --cask font-fira-sans-extra-condensed
 
-brew install --cask font-fontawesome
-brew install --cask font-material-icons
+brew install font-meslo-for-powerline
+
+# https://developer.apple.com/fonts/
+# https://aka.ms/WebFluentFonts
 
 # Terminal
 brew install vim
@@ -67,12 +69,12 @@ brew install --cask iterm2
 # Security
 brew install --cask 1password
 # brew install --cask nordpass
-# brew install --cask bitwarden
+brew install --cask bitwarden
 # brew install --cask lastpass
 # brew install --cask dashlane
 # brew install --cask keeper-password-manager
-brew install --cask authy
-brew install --cask gpg
+# brew install --cask authy
+# brew install --cask gpg
 brew install --cask keepassxc
 
 # Screensaver
@@ -111,6 +113,7 @@ brew install snyk
 
 ## Databases and APIs
 brew install --cask postman
+brew install --cask insomnia
 brew install --cask ngrok
 
 if [ "$withDatabase" = true ] ; then
@@ -139,8 +142,7 @@ if [ "$withHeroku" = true ] ; then
 fi
 
 # Containers and virtual machines
-brew install --cask docker
-brew install docker-compose
+brew install docker docker-compose docker-credential-helper colima
 brew install ctop
 
 brew install --cask switchhosts
@@ -199,7 +201,7 @@ fi
 
 # Write
 brew install --cask macdown
-brew install --cask typora
+# brew install --cask typora
 
 # Grammar
 brew install --cask grammarly
@@ -217,8 +219,10 @@ fi
 # Office
 if [ "$withOffice" = true ] ; then
 
-  brew uninstall --cask onedrive
-  brew install --cask microsoft-office
+  # brew uninstall --cask onedrive
+  # brew install --cask microsoft-office
+
+  brew install --cask onlyoffice
 
 fi
 
