@@ -86,6 +86,7 @@ brew install --cask zoom
 brew install --cask slack
 brew install --cask telegram
 brew install --cask whatsapp
+brew install meetingbar
 
 if [ "$withWorkApps" = true ] ; then
 
