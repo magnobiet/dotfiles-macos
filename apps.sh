@@ -64,7 +64,9 @@ brew install font-meslo-for-powerline
 
 # Terminal
 brew install vim
+brew install exa
 brew install --cask iterm2
+brew install --cask fig
 
 # Security
 brew install --cask 1password
