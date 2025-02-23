@@ -64,9 +64,7 @@ brew install font-meslo-for-powerline
 
 # Terminal
 brew install vim
-brew install exa
 brew install --cask iterm2
-brew install --cask fig
 
 # Security
 brew install --cask 1password
@@ -77,7 +75,7 @@ brew install --cask bitwarden
 # brew install --cask keeper-password-manager
 # brew install --cask authy
 # brew install --cask gpg
-brew install --cask keepassxc
+# brew install --cask keepassxc
 
 # Screensaver
 brew install --cask aerial
@@ -92,7 +90,6 @@ brew install meetingbar
 
 if [ "$withWorkApps" = true ] ; then
 
-  # brew install --cask rocket-chat
   brew install --cask microsoft-teams
 
 fi
@@ -100,7 +97,6 @@ fi
 # Browsers
 brew install --cask firefox
 brew install --cask brave-browser
-# brew install --cask beaker-browser
 brew install --cask google-chrome
 brew install --cask microsoft-edge
 
@@ -108,16 +104,16 @@ brew install --cask microsoft-edge
 brew install git
 brew install git-flow-avh
 brew install --cask github
-brew install --cask sourcetree
+# brew install --cask sourcetree
 
 ## Security
-brew tap snyk/tap
-brew install snyk
+# brew tap snyk/tap
+# brew install snyk
 
 ## Databases and APIs
 brew install --cask postman
-brew install --cask insomnia
-brew install --cask ngrok
+# brew install --cask insomnia
+# brew install --cask ngrok
 
 if [ "$withDatabase" = true ] ; then
   brew install --cask dbeaver-community
@@ -132,15 +128,15 @@ sudo gem install cocoapods
 
 ## IDE/Editors
 brew install --cask visual-studio-code
-brew install --cask android-studio
-brew install --cask sublime-text
-brew install --cask jetbrains-toolbox
+# brew install --cask android-studio
+# brew install --cask sublime-text
+# brew install --cask jetbrains-toolbox
 
 ## PaaS
 if [ "$withHeroku" = true ] ; then
 
-  brew tap heroku/brew
-  brew install heroku
+  # brew tap heroku/brew
+  # brew install heroku
 
 fi
 
@@ -152,12 +148,12 @@ brew install --cask switchhosts
 
 if [ "$withVirtualBox" = true ] ; then
 
-  brew install --cask virtualbox
-  brew install --cask virtualbox-extension-pack
+  # brew install --cask virtualbox
+  # brew install --cask virtualbox-extension-pack
 
-  brew install --cask vagrant
-  brew install vagrant-completion
-  brew install --cask vagrant-manager
+  # brew install --cask vagrant
+  # brew install vagrant-completion
+  # brew install --cask vagrant-manager
 
 fi
 
@@ -167,10 +163,6 @@ brew install --cask poedit
 # Design and images
 brew install --cask figma
 brew install exiftool
-
-## Screenshots
-brew install --cask skitch
-brew install --cask gifox
 
 # Productivity
 if [ "$withWorkApps" = true ] ; then
@@ -185,9 +177,9 @@ brew install --cask vlc
 if [ "$withGames" = true ] ; then
 
   brew install --cask steam
-  brew install --cask gog-galaxy
-  brew install --cask epic-games
-  brew install --cask origin
+  # brew install --cask gog-galaxy
+  # brew install --cask epic-games
+  # brew install --cask origin
 
 fi
 
@@ -209,7 +201,6 @@ brew install --cask macdown
 # Grammar
 brew install --cask grammarly
 brew install --cask dictionaries
-# TODO: wget -c https://cdn.reverso.net/download/reverso/desktop/macos/Reverso.dmg
 
 # Activity tracking analysis
 if [ "$withSport" = true ] ; then
@@ -222,10 +213,10 @@ fi
 # Office
 if [ "$withOffice" = true ] ; then
 
-  # brew uninstall --cask onedrive
-  # brew install --cask microsoft-office
+  brew uninstall --cask onedrive
+  brew install --cask microsoft-office
 
-  brew install --cask onlyoffice
+  # brew install --cask onlyoffice
 
 fi
 
@@ -255,7 +246,7 @@ brew install --cask dozer
 brew install --cask itsycal
 brew install --cask appcleaner
 brew install --cask android-file-transfer
-brew install --cask foxitreader
+# brew install --cask foxitreader
 brew install --cask latest
 brew install --cask the-unarchiver
 brew install --cask keycastr
