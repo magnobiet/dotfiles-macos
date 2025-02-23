@@ -4,10 +4,7 @@ withWorkApps=false
 withGames=false
 withRPI=false
 withOffice=false
-withBitcoin=false
 withSport=false
-withVirtualBox=false
-withHeroku=false
 withSync=false
 withDatabase=false
 withBank=false
@@ -19,10 +16,7 @@ while test $# -gt 0; do
     --games) withGames=true ;;
     --rpi) withRPI=true ;;
     --office) withOffice=true ;;
-    --btc) withBitcoin=true ;;
     --sport) withSport=true ;;
-    --vm) withVirtualBox=true ;;
-    --heroku) withHeroku=true ;;
     --sync) withSync=true ;;
     --db) withDatabase=true ;;
     --bank) widhBank=true ;;
@@ -70,11 +64,6 @@ brew install --cask iterm2
 brew install --cask 1password
 # brew install --cask nordpass
 brew install --cask bitwarden
-# brew install --cask lastpass
-# brew install --cask dashlane
-# brew install --cask keeper-password-manager
-# brew install --cask authy
-# brew install --cask gpg
 # brew install --cask keepassxc
 
 # Screensaver
@@ -102,18 +91,10 @@ brew install --cask microsoft-edge
 
 # Development
 brew install git
-brew install git-flow-avh
 brew install --cask github
-# brew install --cask sourcetree
-
-## Security
-# brew tap snyk/tap
-# brew install snyk
 
 ## Databases and APIs
 brew install --cask postman
-# brew install --cask insomnia
-# brew install --cask ngrok
 
 if [ "$withDatabase" = true ] ; then
   brew install --cask dbeaver-community
@@ -129,33 +110,13 @@ sudo gem install cocoapods
 ## IDE/Editors
 brew install --cask visual-studio-code
 # brew install --cask android-studio
-# brew install --cask sublime-text
 # brew install --cask jetbrains-toolbox
-
-## PaaS
-if [ "$withHeroku" = true ] ; then
-
-  # brew tap heroku/brew
-  # brew install heroku
-
-fi
 
 # Containers and virtual machines
 brew install docker docker-compose docker-credential-helper colima
 brew install ctop
 
 brew install --cask switchhosts
-
-if [ "$withVirtualBox" = true ] ; then
-
-  # brew install --cask virtualbox
-  # brew install --cask virtualbox-extension-pack
-
-  # brew install --cask vagrant
-  # brew install vagrant-completion
-  # brew install --cask vagrant-manager
-
-fi
 
 ## i18n
 brew install --cask poedit
@@ -199,8 +160,8 @@ brew install --cask macdown
 # brew install --cask typora
 
 # Grammar
-brew install --cask grammarly
-brew install --cask dictionaries
+brew install --cask grammarly-desktop
+# brew install --cask dictionaries
 
 # Activity tracking analysis
 if [ "$withSport" = true ] ; then
@@ -228,11 +189,6 @@ if [ "$withRPI" = true ] ; then
 
 fi
 
-# Bitcoin
-if [ "$withBitcoin" = true ] ; then
-  brew install --cask exodus
-fi
-
 # Bank
 if [ "$withBank" = true ] ; then
   brew install --cask itau
@@ -242,11 +198,10 @@ fi
 brew install --cask notion
 brew install --cask anki
 brew install --cask tiles
-brew install --cask dozer
+brew install --cask hiddenbar
 brew install --cask itsycal
 brew install --cask appcleaner
 brew install --cask android-file-transfer
-# brew install --cask foxitreader
 brew install --cask latest
 brew install --cask the-unarchiver
 brew install --cask keycastr
