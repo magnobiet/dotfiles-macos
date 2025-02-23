@@ -38,13 +38,6 @@ function pyserver() {
 
 }
 
-# https://laravel.com/docs/5.7/homestead#daily-usage
-function __homestead() {
-
-  ( cd ~/Homestead && vagrant $* )
-
-}
-
 # https://github.com/elgris/dotfiles/blob/master/bash_aliases#L15
 function extract() {
 
@@ -68,69 +61,5 @@ function extract() {
    else
     echo "'$1' is not a valid file"
    fi
-
-}
-
-# https://hub.docker.com/_/composer
-function __php_composer() {
-
-  docker run \
-    `tty -s && tty=--tty` \
-    --init \
-    --interactive \
-    --rm \
-    --user $(id -u):$(id -g) \
-    --volume /etc/passwd:/etc/passwd:ro \
-    --volume /etc/group:/etc/group:ro \
-    --volume $(pwd):/app \
-    composer "$@"
-
-}
-
-# https://hub.docker.com/r/magnobiet/php
-function __php() {
-
-  docker run \
-    --init \
-    --rm \
-    --interactive \
-    --user $(id -u):$(id -g) \
-    --volume /etc/passwd:/etc/passwd:ro \
-    --volume /etc/group:/etc/group:ro \
-    --volume $(pwd):/app \
-    --workdir /app \
-    --network host \
-    magnobiet/php:7.2-cli-alpine \
-    php "$@"
-
-}
-
-# https://hub.docker.com/r/phpstan/phpstan
-function __phpstan() {
-
-  docker run \
-    --init \
-    --rm \
-    --user $(id -u):$(id -g) \
-    --volume $(pwd):/app \
-    phpstan/phpstan "$@"
-
-}
-
-# https://hub.docker.com/r/phpunit/phpunit
-function __phpunit() {
-
-  docker run \
-    --init \
-    --rm \
-    --volume $(pwd):/app \
-    phpunit/phpunit "$@"
-
-}
-
-# https://hub.docker.com/r/nunomaduro/phpinsights
-function __phpinsights() {
-
-  docker run -it --rm -v $(pwd):/app nunomaduro/phpinsights
 
 }
