@@ -56,7 +56,7 @@ brew upgrade
 brew install wget
 brew install tree
 brew install htop
-brew install neofetch
+brew tap gantoreno/macfetch && brew install macfetch
 
 # macOS default configs
 sh $DOTFILES_PATH/defaults.sh
@@ -86,7 +86,7 @@ sh $DOTFILES_PATH/open.sh
 # Reset Launchpad
 defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock
 
-neofetch
+macfetch
 
 echo ""
 echo "✅ Done. Note that some of these changes require a logout/restart to take effect.\n"
