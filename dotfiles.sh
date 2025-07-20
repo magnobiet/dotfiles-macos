@@ -25,5 +25,3 @@ if [ -f ~/.aliases ]; then
 fi" >> $HOME/.zshrc
 
 fi
-
-curl 'https://vim-bootstrap.com/generate.vim' --data 'langs=html&langs=javascript&langs=php&langs=typescript&theme=dracula&editor=vim' > ~/.vimrc

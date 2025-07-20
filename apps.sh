@@ -27,11 +27,6 @@ while test $# -gt 0; do
 done
 
 # Fonts
-if [ ! `which svn` ]; then
-  brew install svn
-fi
-
-brew tap homebrew/cask-fonts
 
 brew install --cask font-jetbrains-mono
 
@@ -59,12 +54,14 @@ brew install font-meslo-for-powerline
 # Terminal
 brew install vim
 brew install --cask iterm2
+brew install --cask amazon-q
 
 # Security
 brew install --cask 1password
-# brew install --cask nordpass
 brew install --cask bitwarden
-# brew install --cask keepassxc
+brew install --cask keepassxc
+brew install --cask pareto-security
+brew install --cask surfshark
 
 # Screensaver
 brew install --cask aerial
@@ -109,9 +106,8 @@ sudo gem install cocoapods
 
 ## IDE/Editors
 brew install --cask visual-studio-code
-# brew install --cask android-studio
-# brew install --cask jetbrains-toolbox
-
+brew install --cask android-studio
+brew install --cask jetbrains-toolbox
 # Containers and virtual machines
 brew install docker docker-compose docker-credential-helper colima
 brew install ctop
@@ -124,11 +120,6 @@ brew install --cask poedit
 # Design and images
 brew install --cask figma
 brew install exiftool
-
-# Productivity
-if [ "$withWorkApps" = true ] ; then
-  brew install --cask toggl-track
-fi
 
 # Streaming and media players
 brew install --cask spotify
@@ -195,6 +186,8 @@ if [ "$withBank" = true ] ; then
 fi
 
 # Others
+brew install --cask raycast
+brew install --cask aldente
 brew install --cask notion
 brew install --cask anki
 brew install --cask tiles
@@ -205,4 +198,6 @@ brew install --cask android-file-transfer
 brew install --cask latest
 brew install --cask the-unarchiver
 brew install --cask keycastr
+brew install --cask todoist-app
+brew install --cask logi-options+
 brew install folderify

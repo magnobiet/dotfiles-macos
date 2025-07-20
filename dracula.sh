@@ -12,20 +12,6 @@ if [ ! -d "$THEME_PATH/ZSH" ]; then
 
 fi
 
-if [ ! -d "$THEME_PATH/Xcode" ]; then
-
-  git clone https://github.com/dracula/xcode.git Xcode
-
-  mkdir -p ~/Library/Developer/Xcode/UserData/FontAndColorThemes/
-  ln -s ~/Themes/Dracula/Xcode/Dracula.xccolortheme ~/Library/Developer/Xcode/UserData/FontAndColorThemes/Dracula.xccolortheme
-
-fi
-
-if [ ! -d "$THEME_PATH/Terminal" ]; then
-  git clone https://github.com/dracula/terminal-app.git Terminal
-
-fi
-
 if [ ! -d "$THEME_PATH/Vim" ]; then
 
   git clone https://github.com/dracula/vim.git Vim
@@ -40,13 +26,5 @@ if [ ! -d "$THEME_PATH/Vim" ]; then
 fi
 
 if [ ! -d "$THEME_PATH/iTerm" ]; then
-
   git clone https://github.com/dracula/iterm.git iTerm
-
-fi
-
-if [ ! -d "$THEME_PATH/Telegram" ]; then
-
-  git clone https://github.com/dracula/telegram.git Telegram
-
 fi

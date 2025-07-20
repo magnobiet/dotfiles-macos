@@ -1,63 +1,34 @@
 #!/bin/bash
 
-if [ ! `which gpg` ]; then
-  brew install gpg
+for pkg in gpg curl unzip 7-zip asdf; do
+  if ! command -v "${pkg}" >/dev/null 2>&1; then
+    brew install "${pkg}"
+  fi
+done
+
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
+if ! grep -q "/completions" "$HOME/.zshrc"; then
+  mkdir -p "${ASDF_DATA_DIR:-$HOME/.asdf}/completions"
+  asdf completion zsh > "${ASDF_DATA_DIR:-$HOME/.asdf}/completions/_asdf"
+
+  echo 'fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)' >> "$HOME/.zshrc"
+  echo 'autoload -Uz compinit && compinit' >> "$HOME/.zshrc"
 fi
 
-if [ ! `which curl` ]; then
-  brew install curl
+if ! asdf plugin-list | grep -q "nodejs"; then
+  asdf plugin add nodejs
 fi
 
-if [ ! `which unzip` ]; then
-  brew install unzip
+asdf install nodejs 22.17.1
+asdf global nodejs 22.17.1
+
+# Add and install python plugin/version if not present
+if ! asdf plugin-list | grep -q "python"; then
+  asdf plugin add python
 fi
 
-if [ ! `which 7zz` ]; then
-  brew install 7-zip
-fi
+asdf install python 3.13.5
+asdf global python 3.13.5
 
-brew install asdf
-
-if ! grep -q "$(brew --prefix asdf)/asdf.sh" "$HOME/.zshrc"; then
-
-  echo "
-echo "\n. $(brew --prefix asdf)/asdf.sh" >> ~/.zshrc
-" >> $HOME/.zshrc
-
-fi
-
-if ! grep -q "$(brew --prefix asdf)/etc/bash_completion.d/asdf.bash" "$HOME/.zshrc"; then
-
-  echo "
-echo "\n. $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash" >> ~/.zshrc
-" >> $HOME/.zshrc
-
-fi
-
-source $HOME/.zshrc
-
-asdf plugin add nodejs
-asdf install nodejs 22.14.0
-asdf set -u nodejs 22.14.0
-
-# asdf plugin add dart https://github.com/patoconnor43/asdf-dart.git
-# asdf install dart 3.1
-# asdf set -u dart 3.1
-
-# asdf plugin add flutter
-# asdf install flutter 3.29.0
-# asdf set -u flutter 3.29.0
-
-asdf plugin add python
-asdf install python 3.13.2
-asdf set -u python 3.13.2
-
-# asdf plugin add golang https://github.com/kennyp/asdf-golang.git
-# asdf install golang 1.24.0
-# asdf set -u golang 1.24.0
-
-# asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
-# asdf install ruby 3.4.2
-# asdf set -u ruby 3.4.2
-
-source $HOME/.zshrc
+echo "Setup completed. Please restart your terminal."
